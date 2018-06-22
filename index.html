@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <title>Seinfeld Trivia!</title>
 </head>
-<body>
-    
+<!-- page background -->
+
+<body style="background-image:url(assets/images/Sein_Trivia_BG.jpg)">
+
+    <!-- music -->
+    <audio id="theme">
+        <source src="assets/images/timerMusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- start page -->
+    <div id="welcome">
+        <p>Click below to test your Seinfeld knowledge!</p>
+        <button id="start" class="block">Giddyup!</button>
+    </div>
+    <!-- timer and questions -->
+    <div id="trivia">
+        <p id="clock">
+            <span id="timeLeft">51 Seconds Left</span>
+        </p>
+        <!-- question 1 -->
+        <p class="question">Who is Jerry’s nemesis?</p>
+
+        <input type="radio" name="q1" value="Crazy Joe Davola">Crazy Joe Davola
+        <input type="radio" name="q1" value="Newman">Newman
+        <input type="radio" name="q1" value="Tim Whatley">Tim Whatley
+        <input type="radio" name="q1" value="Kenny Bania">Kenny Bania
+        <!-- question 2 -->
+        <p class="question">Elaine’s frenemy, Sue Ellen Mishky, is the heiress to which candy bar fortune?</p>
+
+        <input type="radio" name="q2" value="Snickers">Snickers
+        <input type="radio" name="q2" value="3 Muskateers">3 Muskateers
+        <input type="radio" name="q2" value="Oh Henry">Oh Henry
+        <input type="radio" name="q2" value="Payday">Payday
+
+        <!-- question 3 -->
+        <p class="question">What is George Constanza’s alias of choice?</p>
+
+        <input type="radio" name="q3" value="RJ Pennypacker">RJ Pennypacker
+        <input type="radio" name="q3" value="Lloyd Braun">Lloyd Braun
+        <input type="radio" name="q3" value="Mr. Pitt">Mr. Pitt
+        <input type="radio" name="q3" value="Art Vandalay">Art Vandalay
+
+        <!-- question 4 -->
+        <p class="question">What is Kramer's first name?</p>
+
+        <input type="radio" name="q4" value="Bob">Bob
+        <input type="radio" name="q4" value="Hamish">Hamish
+        <input type="radio" name="q4" value="Cosmo">Cosmo
+        <input type="radio" name="q4" value="Arlo">Arlo
+
+        <!-- question 5 -->
+        <p class="question">What was the name of the holiday invented by George’s father?</p>
+
+        <input type="radio" name="q5" value="The Human Fund">The Human Fund
+        <input type="radio" name="q5" value="Holly Eve">Holly Eve
+        <input type="radio" name="q5" value="Appreciation Day">Appreciation Day
+        <input type="radio" name="q5" value="Festivus">Festivus
+
+        <!-- question 6 -->
+        <p class="question">Which member of the gang had an intern named Darren?</p>
+
+        <input type="radio" name="q6" value="Elaine">Elaine
+        <input type="radio" name="q6" value="Jerry">Jerry
+        <input type="radio" name="q6" value="George">George
+        <input type="radio" name="q6" value="Kramer">Kramer
+
+        <!-- question 7 -->
+        <p class="question">Who has the highest IQ?</p>
+
+        <input type="radio" name="q7" value="Elaine">Elaine
+        <input type="radio" name="q7" value="Jerry">Jerry
+        <input type="radio" name="q7" value="George">George
+        <input type="radio" name="q7" value="Kramer">Kramer
+
+        <!-- question 8 -->
+        <p class="question">What was George's nickname when he worked at Kruger Industries?</p>
+
+        <input type="radio" name="q8" value="Biff">Biff
+        <input type="radio" name="q8" value="T-Bone">T-Bone
+        <input type="radio" name="q8" value="Georgie Boy">Georgie Boy
+        <input type="radio" name="q8" value="Koko the Monkey">Koko the Monkey
+
+        <!-- question 9 -->
+        <p class="question">What was the name of the movie Jerry was forced to bootleg at gunpoint?</p>
+
+        <input type="radio" name="q9" value="Death Blow">Death Blow
+        <input type="radio" name="q9" value="The English Patient">The English Patient
+        <input type="radio" name="q9" value="Sack Lunch">Sack Lunch
+        <input type="radio" name="q9" value="Rochelle Rochelle">Rochelle Rochelle
+
+        <!-- question 10 -->
+        <p class="question">Who’s signature dance involves thumbs, jerks, and little kicks?</p>
+
+        <input type="radio" name="q10" value="Elaine">Elaine
+        <input type="radio" name="q10" value="Jerry">Jerry
+        <input type="radio" name="q10" value="George">George
+        <input type="radio" name="q10" value="Kramer">Kramer
+
+        <br>
+        <br>
+        <!-- finished button -->
+        <button id="finished">That's it for me!</button>
+
+        <br>
+        <br>
+
+    </div>
+
+    <!-- results -->
+    <div id="results">
+        <p>Let see how you did!</p>
+        <p>Correct:
+            <span id="correct">0</span>
+        </p>
+        <p>Incorrect:
+            <span id="incorrect">0</span>
+        </p>
+
+    </div>
+
+
+
+
+
 </body>
+
 </html>
