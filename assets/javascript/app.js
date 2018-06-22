@@ -12,6 +12,7 @@ var incorrect = 0
 //     x.pause(); 
 // } 
 
+// document ready and timer
 $(document).ready(function () {
     var timer = 51;
     var intervalId;
@@ -27,7 +28,6 @@ $(document).ready(function () {
         $("#timeLeft").html(timer + " Seconds Left");
         if (timer == 0) {
             stop();
-            alert("Time Up!");
             $("#welcome").hide();
             $("#trivia").hide();
             $("#results").show();
@@ -38,15 +38,17 @@ $(document).ready(function () {
     $("#trivia").hide();
     $("#results").hide();
 
+    //reveals questions and starts game and timer
     $("#start").on('click', function () {
         $("#welcome").hide();
-
+        document.getElementById('theme').play(); //audio and jQuery were not getting along for me so did it JS style
         $("#trivia").show();
         run();
         
         // return;
     })
 
+    // zero function stores radio input, matches questions to right answers, and logs results
     function zero() {
         var q1 = $("input[type=radio][name='q1']:checked").val();
         var q2 = $("input[type=radio][name='q2']:checked").val();
@@ -126,11 +128,15 @@ $(document).ready(function () {
         $("#incorrect").html(incorrect);
     }
 
+    // reveals final result page and displays results by running the zero function
     $("#finished").on("click", function () {
+        document.getElementById('theme').pause();
         $("#welcome").hide();
         $("#trivia").hide();
         $("#results").show();
         zero();
+        var image = $("<img class='gif'>").attr("src", "https://images.complex.com/complex/image/upload/t_in_content_image/Pez_nqglpv.gif");
+        $("#results").append(image);
     })
 
 

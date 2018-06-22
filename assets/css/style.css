@@ -60,11 +60,16 @@ audio {
     box-shadow:2px 2px 2px black;
     position:absolute;
     left: 200px;
-    top: 350px;
+    top: 250px;
     font-family: Arial, Helvetica, sans-serif;
     font-size:30px;
     color:#cc2933;
     text-shadow:1px 1px 1px black;
+}
+
+.gif {
+    width:400px;
+    height:222px;
 }
 
 
