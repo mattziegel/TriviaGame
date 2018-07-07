@@ -37,6 +37,7 @@ audio {
     position:absolute;
     left: 200px;
     top: 250px;
+    margin-bottom: 20px;
 }
 
 #timeLeft {
@@ -56,13 +57,15 @@ audio {
     border:solid #50b2c7;
     border-width: 6px;
     width:615px;
+    height:440px;
     text-align:center;
     box-shadow:2px 2px 2px black;
     position:absolute;
     left: 200px;
-    top: 250px;
+    top: 240px;
     font-family: Arial, Helvetica, sans-serif;
     font-size:30px;
+    line-height:20px;
     color:#cc2933;
     text-shadow:1px 1px 1px black;
 }
