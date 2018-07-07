@@ -32,6 +32,8 @@ $(document).ready(function () {
             $("#trivia").hide();
             $("#results").show();
             zero();
+            var image = $("<img class='gif'>").attr("src", "https://images.complex.com/complex/image/upload/t_in_content_image/Pez_nqglpv.gif");
+            $("#results").append(image);
         }
     }
 
@@ -44,7 +46,7 @@ $(document).ready(function () {
         document.getElementById('theme').play(); //audio and jQuery were not getting along for me so did it JS style
         $("#trivia").show();
         run();
-        
+
         // return;
     })
 
