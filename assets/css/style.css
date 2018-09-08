@@ -1,5 +1,9 @@
 body {
-    width:1024px;
+    background-image: url("../images/Sein_Trivia_BG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top; 
+    background-color:#f1d54d;
 }
 
 #welcome {
@@ -10,9 +14,9 @@ body {
     height:240px;
     text-align:center;
     box-shadow:2px 2px 2px;
-    position:absolute;
-    left: 337px;
-    top: 350px;
+    margin:auto;
+    position: relative;
+    top: 300px;
 }
 
 p{
@@ -34,10 +38,9 @@ audio {
     width:615px;
     text-align:center;
     box-shadow:2px 2px 2px;
-    position:absolute;
-    left: 200px;
+    position:relative;
+    margin:auto;
     top: 250px;
-    margin-bottom: 20px;
 }
 
 #timeLeft {
@@ -60,19 +63,25 @@ audio {
     height:440px;
     text-align:center;
     box-shadow:2px 2px 2px black;
-    position:absolute;
-    left: 200px;
-    top: 240px;
     font-family: Arial, Helvetica, sans-serif;
     font-size:30px;
     line-height:20px;
     color:#cc2933;
     text-shadow:1px 1px 1px black;
+    margin:auto;
+    position: relative;
+    top: 300px;
 }
 
 .gif {
     width:400px;
     height:222px;
+}
+
+@media only screen and (max-width:400px) {
+    #results, #trivia, #welcome {
+        width:100%;
+    } 
 }
 
 
